@@ -12,5 +12,7 @@ Route::get('/pages', 'PagesController@index');
 Route::get('/services', 'PagesController@services');
 Route::get('/about', 'PagesController@about');
 
+Route::resource('courses', 'CoursesController');
+
 //Route::get('/courses/create', 'CoursesController@create');
 //Route::post('/courses', 'CoursesController@store');
