@@ -38,7 +38,7 @@ class CoursesController extends Controller
         $course = new Course;
         $course->code = $request->input('code');
         $course->name = $request->input('name');
-        $course->description = $request->input('save');
+        $course->description = $request->input('description');
         $course->save();
     }
 
