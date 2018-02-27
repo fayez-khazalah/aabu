@@ -15,7 +15,7 @@
   </div>
 
 	<div class="form-group">
-  <textarea name="description" id="desc" class="form-control">Enter Description</textarea>
+  <textarea name="description" id="desc" class="form-control" placeholder="Enter Description"></textarea>
 </div>
 
   <div class="form-group">
