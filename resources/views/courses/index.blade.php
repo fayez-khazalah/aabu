@@ -14,4 +14,8 @@
 </div>
 @endforeach
 
+<div class="text-center">
+  {{ $courses->links() }}
+</div>
+
 @endsection
