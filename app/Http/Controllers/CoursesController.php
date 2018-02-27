@@ -14,7 +14,11 @@ class CoursesController extends Controller
      */
     public function index()
     {
-        //
+        //$courses = Course::all();
+        $courses = Course::latest()->get();
+        //$courses = Course::latest()->paginate(5);
+
+        return view('courses.index')->with('courses', $courses);
     }
 
     /**
