@@ -44,14 +44,14 @@ class CoursesController extends Controller
             'code' => 'required|size:6',
             'name' => 'required|min:3'
         ]);
-        
+
         $course = new Course;
         $course->code = $request->input('code');
         $course->name = $request->input('name');
         $course->description = $request->input('description');
         $course->save();
 
-        return redirect('/courses');
+        return redirect('/courses')->with('success', 'Course Created!');
     }
 
     /**
@@ -97,7 +97,7 @@ class CoursesController extends Controller
 
         $course->save();
 
-        return redirect('/courses');
+        return redirect('/courses')->with('success', 'Course Updated!');
     }
 
     /**
@@ -112,6 +112,6 @@ class CoursesController extends Controller
 
         $course->delete();
 
-        return redirect('/courses');
+        return redirect('/courses')->with('success', 'Course Removed!');
     }
 }
