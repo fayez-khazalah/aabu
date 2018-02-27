@@ -1,6 +1,15 @@
 @extends('layouts.master')
 
 @section('content')
+@if ($errors->any())
+  <div class="alert alert-default alert-danger">
+    <ul>
+        @foreach ($errors->all() as $error)
+          <li>{{ $error }}</li>
+        @endforeach
+    </ul>
+  </div>
+@endif
 <h1>Add Course</h1>
 <form method="post" action="/courses">
 	{{ csrf_field() }}
