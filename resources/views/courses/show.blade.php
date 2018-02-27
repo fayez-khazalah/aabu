@@ -17,4 +17,10 @@
   <small>Written on {{ $course->created_at }}</small>
 </div>
 
+<hr>
+
+<div class="text-center">
+  <a href="/courses/{{ $course->id }}/edit" class="btn btn-success btn-lg">Edit</a>
+</div>
+
 @endsection
