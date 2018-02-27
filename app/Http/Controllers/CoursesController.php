@@ -44,6 +44,8 @@ class CoursesController extends Controller
         $course->name = $request->input('name');
         $course->description = $request->input('description');
         $course->save();
+
+        return redirect('/courses');
     }
 
     /**
@@ -100,6 +102,10 @@ class CoursesController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $course = Course::find($id);
+
+        $course->delete();
+
+        return redirect('/courses');
     }
 }

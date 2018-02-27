@@ -19,8 +19,11 @@
 
 <hr>
 
-<div class="text-center">
-  <a href="/courses/{{ $course->id }}/edit" class="btn btn-success btn-lg">Edit</a>
-</div>
+<a href="/courses/{{ $course->id }}/edit" class="btn btn-success btn-lg pull-left">Edit</a>
+<form method="post" action="/courses/{{ $course->id }}">
+  {{ csrf_field() }}
+  {{ method_field('DELETE') }}
+  <button type="submit" class="btn btn-danger btn-lg pull-right">Delete</button>
+</form>
 
 @endsection
